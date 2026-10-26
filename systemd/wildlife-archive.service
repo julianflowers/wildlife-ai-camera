@@ -1,0 +1,9 @@
+[Unit]
+Description=Archive IMX500 wildlife recordings to Google Drive
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=rp2
+ExecStart=/home/rp2/bin/archive_wildlife.sh
