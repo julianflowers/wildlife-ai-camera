@@ -1,0 +1,17 @@
+[Unit]
+Description=IMX500 AI Wildlife Camera
+After=network.target
+
+[Service]
+Type=simple
+User=rp2
+WorkingDirectory=/home/rp2/picamera2-examples/examples/imx500
+
+ExecStart=/usr/bin/python3 /home/rp2/picamera2-examples/examples/imx500/wildlife_camera.py --model /usr/share/imx500-models/imx500_network_ssd_mobilenetv2_fpnlite_320x320_pp.rpk
+
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

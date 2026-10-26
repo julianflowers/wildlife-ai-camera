@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.bak
+*.log
+*.h264
+*.mp4
+*.jpg
+*.jpeg
+*.dng
+*.tmp
+.env
